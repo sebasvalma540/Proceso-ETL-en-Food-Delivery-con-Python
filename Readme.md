@@ -47,11 +47,12 @@ Una startup de Food Delivery quiere expandirse en Estados Unidos. Antes de lanza
 | `restaurants.csv` | Catálogo de restaurantes: dirección completa, puntaje, número de calificaciones, categoría y rango de precios (`$`). | 63,469 |
 | `restaurant-menus.csv` | Detalle de cada ítem vendido: categoría, nombre, descripción y precio en texto (ej. `14.0 USD`). | 836,350 (muestra usada) |
 
----
-![](/Workspace/Users/valentinsebastian540@gmail.com/Proceso-ETL-en-Food-Delivery-con-Python/Imagenes/Flujo ETL -PYTHON.png)
 
----
-
+```
+ CSV crudos   ──► 📥 EXTRACT  ─► 🧹 TRANSFORM     ──► 💾 LOAD  ──► 📊 BI
+ (restaurants,    (pandas)        (limpieza, split,    (SQLite)     (consultas SQL)
+  menus)                           mapeo, merge)
+```
 
 | Etapa | Entrada | Salida |
 |---|---|---|
